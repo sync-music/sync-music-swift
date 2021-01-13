@@ -16,13 +16,9 @@ final class RegisterWebService: WebService {
     typealias DecodedType = RegisterWebServiceResponse
     typealias ServiceParameters = RegisterWebServiceParameters
     
-    var url: URL? = URL(string: "https://api.syncmusic.maxencemottard.com/api/register")
+    var url: String = "https://api.syncmusic.maxencemottard.com/api/register"
     
     var httpMethod: HTTPMethod = .POST
     
-    var headers: [String : String]? = [:]
-    
-    func execute(_ parameters: ServiceParameters) -> AnyPublisher<DecodedType, Error> {
-        return call(parameters)
-    }
+    var headers: [String : String] = [:]
 }

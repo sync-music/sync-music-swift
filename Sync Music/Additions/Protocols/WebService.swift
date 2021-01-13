@@ -24,12 +24,9 @@ protocol WebService: Weakable {
     associatedtype DecodedType: Decodable
     associatedtype ServiceParameters: Encodable;
 
-    var url: URL? { get set };
+    var url: String { get set };
     var httpMethod: HTTPMethod { get set };
-    var headers: [String: String]? { get set };
-//    var dataType: WebServiceDataType { get set };
-    
-    func execute(_ parameters: ServiceParameters) -> AnyPublisher<DecodedType, Error>
+    var headers: [String: String] { get set };
 }
 
 extension WebService {
@@ -39,25 +36,17 @@ extension WebService {
     }
     
     func generateHeaders() -> [String: String] {
-        var headersArray = headers ?? [:]
-        headersArray["Content-Type"] = "application/json"
-        headersArray["no-cache"] = "cache-control"
+        headers["content-type"] = "application/json"
+        headers["no-cache"] = "cache-control"
         
-        return headersArray
+        return headers
     }
     
-    func authenticatedCall(_ parameters: ServiceParameters) -> AnyPublisher<DecodedType, Error> {
-        guard let idToken = UserDefaults.standard.string(forKey: "firebaseIdToken") else { return AnyPublisher.empty() }
-        
-        var headersArray = headers ?? [:]
-        headersArray["autorization"] = "Bearer \(idToken)"
-        
-        return call(parameters)
-    }
-    
-    func call(_ parameters: ServiceParameters) -> AnyPublisher<DecodedType, Error> {
+    func call(_ parameters: ServiceParameters, urlParameters: [String]) -> AnyPublisher<DecodedType, Error> {
         do {
-            guard let url = url else { return AnyPublisher.empty() }
+            let urlString = String(format: url, arguments: urlParameters)
+            guard let url = URL(string: urlString) else { return AnyPublisher.empty() }
+
             var request = URLRequest(url: url)
             request.httpMethod = httpMethod.rawValue
             request.httpBody = try encodeBody(parameters: parameters)
@@ -75,4 +64,7 @@ extension WebService {
         }
     }
     
+    func addHeader(key: String, value: String) {
+        headers[key] = value
+    }
 }

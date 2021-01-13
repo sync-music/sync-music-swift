@@ -12,8 +12,9 @@ class ViewModel: ObservableObject, Weakable {
     var bag = Set<AnyCancellable>()
     var error: Error?
     
-    func executeRequest<T>(_ publisher: AnyPublisher<T, Error>, onSuccess: @escaping ((T) -> Void), onError: ((Error) -> Void)?) {
-        publisher
+    func executeRequest<T: WebService>(_ serviceSetup: ExecuteServiceSetup<T>, onSuccess: @escaping ((T.DecodedType) -> Void), onError: ((Error) -> Void)? = nil) {
+        serviceSetup.service
+            .call(serviceSetup.parameters, urlParameters: serviceSetup.urlParameters)
             .sink(receiveCompletion: weakify { strongSelf, result in
                 switch result {
                 case .finished:
@@ -31,11 +32,13 @@ class ViewModel: ObservableObject, Weakable {
             }).store(in: &bag)
     }
 
-    func executeRequest<T>(_ publisher: AnyPublisher<T, Error>, onSuccess: @escaping ((T) -> Void)) {
-        executeRequest(publisher, onSuccess: onSuccess, onError: nil)
-    }
-
     private func handleError(error: Error) {
         self.error = error
+    }
+    
+    struct ExecuteServiceSetup<T: WebService> {
+        let service: T
+        let parameters: T.ServiceParameters
+        let urlParameters: [String] = []
     }
 }
