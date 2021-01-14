@@ -13,7 +13,7 @@ final class RegisterViewModel: FirebaseViewModel {
     @Published var password: String = ""
     @Published var confirmPassword: String = ""
 
-    let registerService = RegisterWebService()
+    var registerService: RegisterWebService!
 
     func handleRegister() {
 //        Check values

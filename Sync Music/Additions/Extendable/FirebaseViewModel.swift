@@ -11,11 +11,9 @@ class FirebaseViewModel: ViewModel {
     var firebaseService: FirebaseService!
 
     func executeRequestWithAuthorization<T: WebService>(_ serviceSetup: ExecuteServiceSetup<T>, onSuccess: @escaping ((T.DecodedType) -> Void)) {
-        firebaseService.currentIdToken.sink(receiveCompletion: { _ in
-            return
-        }, receiveValue: weakify { strongSelf, token in
-            serviceSetup.service.addHeader(key: "authorization", value: "Bearer \(token)")
-            strongSelf.executeRequest(serviceSetup, onSuccess: onSuccess, onError: nil)
-        }).store(in: &bag)
+        guard let token = firebaseService.currentIdToken else { return }
+        
+        serviceSetup.service.addHeader(key: "authorization", value: "Bearer \(token)")
+        executeRequest(serviceSetup, onSuccess: onSuccess, onError: nil)
     }
 }

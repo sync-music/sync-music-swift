@@ -3,23 +3,78 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D047040D25AEB1B600AA56CC /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047040C25AEB1B600AA56CC /* RegisterViewModel.swift */; };
+		D047041125AEB71A00AA56CC /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D047041025AEB71A00AA56CC /* Swinject */; };
+		D047041625AEB76B00AA56CC /* HelperAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047041525AEB76B00AA56CC /* HelperAssembly.swift */; };
+		D047041A25AEB7F000AA56CC /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = D047041925AEB7F000AA56CC /* SwinjectAutoregistration */; };
+		D047042225AEBB4100AA56CC /* ViewControllerProvider+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047042125AEBB4100AA56CC /* ViewControllerProvider+Login.swift */; };
+		D047042725AEBBFE00AA56CC /* ViewControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047042625AEBBFE00AA56CC /* ViewControllerProvider.swift */; };
+		D047042A25AEBC2700AA56CC /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047042925AEBC2700AA56CC /* LoginAssembly.swift */; };
+		D047042D25AEC31C00AA56CC /* FirebaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047042C25AEC31C00AA56CC /* FirebaseViewModel.swift */; };
+		D047043725AEC64700AA56CC /* ViewControllerProvider+SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047043625AEC64700AA56CC /* ViewControllerProvider+SplashScreen.swift */; };
+		D047043A25AEC66800AA56CC /* SplashScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047043925AEC66800AA56CC /* SplashScreenAssembly.swift */; };
+		D047043F25AEC6ED00AA56CC /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047043E25AEC6ED00AA56CC /* SplashScreenView.swift */; };
+		D047044225AEC84A00AA56CC /* SplashScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047044125AEC84A00AA56CC /* SplashScreenViewModel.swift */; };
+		D04D646425A4DCD20028CA66 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D646325A4DCD20028CA66 /* ViewModel.swift */; };
+		D081055F259875BE0052625D /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D081055E259875BE0052625D /* FirebaseService.swift */; };
+		D081056425987A770052625D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D081056325987A770052625D /* GoogleService-Info.plist */; };
+		D08105672598936E0052625D /* Weakable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08105662598936E0052625D /* Weakable.swift */; };
 		D0AA468D25973AB100B187CF /* Sync_MusicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AA468C25973AB100B187CF /* Sync_MusicApp.swift */; };
-		D0AA468F25973AB100B187CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AA468E25973AB100B187CF /* ContentView.swift */; };
 		D0AA469125973AB600B187CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0AA469025973AB600B187CF /* Assets.xcassets */; };
 		D0AA469425973AB600B187CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0AA469325973AB600B187CF /* Preview Assets.xcassets */; };
+		D0AA469E2597451100B187CF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D0AA469D2597451100B187CF /* FirebaseAuth */; };
+		D0AA46A82597464000B187CF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AA46A72597464000B187CF /* LoginView.swift */; };
+		D0AA46AB259746B000B187CF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AA46AA259746B000B187CF /* LoginViewModel.swift */; };
+		D0AA46B42597476600B187CF /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AA46B32597476600B187CF /* WebService.swift */; };
+		D0AA46BA2597486200B187CF /* AnyEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AA46B92597486200B187CF /* AnyEncodable.swift */; };
+		D0AA46BF259749B500B187CF /* AnyPublisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AA46BE259749B500B187CF /* AnyPublisher+Extensions.swift */; };
+		D0AA46C225974A9B00B187CF /* RegisterWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AA46C125974A9B00B187CF /* RegisterWebService.swift */; };
+		D0EBC32925B021A100CB504A /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBC32825B021A100CB504A /* RegisterView.swift */; };
+		D0EBC32C25B021CD00CB504A /* ViewControllerProvider+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBC32B25B021CD00CB504A /* ViewControllerProvider+Register.swift */; };
+		D0EBC32F25B0221300CB504A /* RegisterAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBC32E25B0221300CB504A /* RegisterAssembly.swift */; };
+		D0EBC33425B022ED00CB504A /* ViewControllerProvider+Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBC33325B022ED00CB504A /* ViewControllerProvider+Home.swift */; };
+		D0EBC33825B022FA00CB504A /* HomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBC33725B022F900CB504A /* HomeAssembly.swift */; };
+		D0EBC33B25B0232E00CB504A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBC33A25B0232E00CB504A /* HomeView.swift */; };
+		D0EBC33E25B023B500CB504A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBC33D25B023B500CB504A /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D047040C25AEB1B600AA56CC /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		D047041525AEB76B00AA56CC /* HelperAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperAssembly.swift; sourceTree = "<group>"; };
+		D047042125AEBB4100AA56CC /* ViewControllerProvider+Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllerProvider+Login.swift"; sourceTree = "<group>"; };
+		D047042625AEBBFE00AA56CC /* ViewControllerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProvider.swift; sourceTree = "<group>"; };
+		D047042925AEBC2700AA56CC /* LoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
+		D047042C25AEC31C00AA56CC /* FirebaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseViewModel.swift; sourceTree = "<group>"; };
+		D047043625AEC64700AA56CC /* ViewControllerProvider+SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllerProvider+SplashScreen.swift"; sourceTree = "<group>"; };
+		D047043925AEC66800AA56CC /* SplashScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenAssembly.swift; sourceTree = "<group>"; };
+		D047043E25AEC6ED00AA56CC /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		D047044125AEC84A00AA56CC /* SplashScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewModel.swift; sourceTree = "<group>"; };
+		D04D646325A4DCD20028CA66 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		D081055E259875BE0052625D /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		D081056325987A770052625D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D08105662598936E0052625D /* Weakable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weakable.swift; sourceTree = "<group>"; };
 		D0AA468925973AB100B187CF /* Sync Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sync Music.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0AA468C25973AB100B187CF /* Sync_MusicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sync_MusicApp.swift; sourceTree = "<group>"; };
-		D0AA468E25973AB100B187CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D0AA469025973AB600B187CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0AA469325973AB600B187CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D0AA469525973AB600B187CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0AA46A72597464000B187CF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D0AA46AA259746B000B187CF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		D0AA46B32597476600B187CF /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		D0AA46B92597486200B187CF /* AnyEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyEncodable.swift; sourceTree = "<group>"; };
+		D0AA46BE259749B500B187CF /* AnyPublisher+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyPublisher+Extensions.swift"; sourceTree = "<group>"; };
+		D0AA46C125974A9B00B187CF /* RegisterWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWebService.swift; sourceTree = "<group>"; };
+		D0EBC32825B021A100CB504A /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		D0EBC32B25B021CD00CB504A /* ViewControllerProvider+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllerProvider+Register.swift"; sourceTree = "<group>"; };
+		D0EBC32E25B0221300CB504A /* RegisterAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAssembly.swift; sourceTree = "<group>"; };
+		D0EBC33325B022ED00CB504A /* ViewControllerProvider+Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllerProvider+Home.swift"; sourceTree = "<group>"; };
+		D0EBC33725B022F900CB504A /* HomeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssembly.swift; sourceTree = "<group>"; };
+		D0EBC33A25B0232E00CB504A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D0EBC33D25B023B500CB504A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,12 +82,80 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0AA469E2597451100B187CF /* FirebaseAuth in Frameworks */,
+				D047041125AEB71A00AA56CC /* Swinject in Frameworks */,
+				D047041A25AEB7F000AA56CC /* SwinjectAutoregistration in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D047040A25AEB1A100AA56CC /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				D047041F25AEBA7700AA56CC /* #Navigation */,
+				D047040C25AEB1B600AA56CC /* RegisterViewModel.swift */,
+				D0EBC32825B021A100CB504A /* RegisterView.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		D047041325AEB72900AA56CC /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				D047041525AEB76B00AA56CC /* HelperAssembly.swift */,
+				D047042625AEBBFE00AA56CC /* ViewControllerProvider.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		D047041F25AEBA7700AA56CC /* #Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				D0EBC32B25B021CD00CB504A /* ViewControllerProvider+Register.swift */,
+				D0EBC32E25B0221300CB504A /* RegisterAssembly.swift */,
+			);
+			path = "#Navigation";
+			sourceTree = "<group>";
+		};
+		D047042025AEBA8200AA56CC /* #Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				D047042125AEBB4100AA56CC /* ViewControllerProvider+Login.swift */,
+				D047042925AEBC2700AA56CC /* LoginAssembly.swift */,
+			);
+			path = "#Navigation";
+			sourceTree = "<group>";
+		};
+		D047043025AEC60100AA56CC /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D047043525AEC63100AA56CC /* #Navigation */,
+				D047043E25AEC6ED00AA56CC /* SplashScreenView.swift */,
+				D047044125AEC84A00AA56CC /* SplashScreenViewModel.swift */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		D047043525AEC63100AA56CC /* #Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				D047043625AEC64700AA56CC /* ViewControllerProvider+SplashScreen.swift */,
+				D047043925AEC66800AA56CC /* SplashScreenAssembly.swift */,
+			);
+			path = "#Navigation";
+			sourceTree = "<group>";
+		};
+		D04D645E25A4DC110028CA66 /* Extendable */ = {
+			isa = PBXGroup;
+			children = (
+				D04D646325A4DCD20028CA66 /* ViewModel.swift */,
+				D047042C25AEC31C00AA56CC /* FirebaseViewModel.swift */,
+			);
+			path = Extendable;
+			sourceTree = "<group>";
+		};
 		D0AA468025973AB100B187CF = {
 			isa = PBXGroup;
 			children = (
@@ -52,11 +175,10 @@
 		D0AA468B25973AB100B187CF /* Sync Music */ = {
 			isa = PBXGroup;
 			children = (
-				D0AA468C25973AB100B187CF /* Sync_MusicApp.swift */,
-				D0AA468E25973AB100B187CF /* ContentView.swift */,
-				D0AA469025973AB600B187CF /* Assets.xcassets */,
-				D0AA469525973AB600B187CF /* Info.plist */,
-				D0AA469225973AB600B187CF /* Preview Content */,
+				D0AA46AF2597474F00B187CF /* Additions */,
+				D0AA46A0259745AE00B187CF /* Application */,
+				D0AA46A42597460A00B187CF /* Epics */,
+				D0AA46AE2597473D00B187CF /* Services */,
 			);
 			path = "Sync Music";
 			sourceTree = "<group>";
@@ -67,6 +189,120 @@
 				D0AA469325973AB600B187CF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D0AA46A0259745AE00B187CF /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D047041325AEB72900AA56CC /* DI */,
+				D0AA46A2259745C700B187CF /* Supporting Files */,
+				D0AA468C25973AB100B187CF /* Sync_MusicApp.swift */,
+				D081056325987A770052625D /* GoogleService-Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		D0AA46A2259745C700B187CF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0AA469225973AB600B187CF /* Preview Content */,
+				D0AA469525973AB600B187CF /* Info.plist */,
+				D0AA469025973AB600B187CF /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0AA46A42597460A00B187CF /* Epics */ = {
+			isa = PBXGroup;
+			children = (
+				D0EBC33125B022D200CB504A /* Home */,
+				D047043025AEC60100AA56CC /* SplashScreen */,
+				D047040A25AEB1A100AA56CC /* Register */,
+				D0AA46A62597462D00B187CF /* Login */,
+			);
+			path = Epics;
+			sourceTree = "<group>";
+		};
+		D0AA46A62597462D00B187CF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D047042025AEBA8200AA56CC /* #Navigation */,
+				D0AA46A72597464000B187CF /* LoginView.swift */,
+				D0AA46AA259746B000B187CF /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D0AA46AE2597473D00B187CF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D0AA46BC2597495300B187CF /* Requests */,
+				D081055E259875BE0052625D /* FirebaseService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D0AA46AF2597474F00B187CF /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				D04D645E25A4DC110028CA66 /* Extendable */,
+				D0AA46BD259749A300B187CF /* Extensions */,
+				D0AA46B82597485400B187CF /* Objects */,
+				D0AA46B12597475700B187CF /* Protocols */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		D0AA46B12597475700B187CF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D0AA46B32597476600B187CF /* WebService.swift */,
+				D08105662598936E0052625D /* Weakable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D0AA46B82597485400B187CF /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				D0AA46B92597486200B187CF /* AnyEncodable.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		D0AA46BC2597495300B187CF /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				D0AA46C125974A9B00B187CF /* RegisterWebService.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		D0AA46BD259749A300B187CF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D0AA46BE259749B500B187CF /* AnyPublisher+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D0EBC33125B022D200CB504A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D0EBC33225B022DB00CB504A /* #Navigation */,
+				D0EBC33A25B0232E00CB504A /* HomeView.swift */,
+				D0EBC33D25B023B500CB504A /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D0EBC33225B022DB00CB504A /* #Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				D0EBC33325B022ED00CB504A /* ViewControllerProvider+Home.swift */,
+				D0EBC33725B022F900CB504A /* HomeAssembly.swift */,
+			);
+			path = "#Navigation";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +321,11 @@
 			dependencies = (
 			);
 			name = "Sync Music";
+			packageProductDependencies = (
+				D0AA469D2597451100B187CF /* FirebaseAuth */,
+				D047041025AEB71A00AA56CC /* Swinject */,
+				D047041925AEB7F000AA56CC /* SwinjectAutoregistration */,
+			);
 			productName = "Sync Music";
 			productReference = D0AA468925973AB100B187CF /* Sync Music.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +353,11 @@
 				Base,
 			);
 			mainGroup = D0AA468025973AB100B187CF;
+			packageReferences = (
+				D0AA469C2597451100B187CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				D047040F25AEB71A00AA56CC /* XCRemoteSwiftPackageReference "Swinject" */,
+				D047041825AEB7F000AA56CC /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
+			);
 			productRefGroup = D0AA468A25973AB100B187CF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -128,6 +374,7 @@
 			files = (
 				D0AA469425973AB600B187CF /* Preview Assets.xcassets in Resources */,
 				D0AA469125973AB600B187CF /* Assets.xcassets in Resources */,
+				D081056425987A770052625D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +385,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0AA468F25973AB100B187CF /* ContentView.swift in Sources */,
+				D0AA46AB259746B000B187CF /* LoginViewModel.swift in Sources */,
+				D047043725AEC64700AA56CC /* ViewControllerProvider+SplashScreen.swift in Sources */,
+				D047042225AEBB4100AA56CC /* ViewControllerProvider+Login.swift in Sources */,
+				D0EBC32925B021A100CB504A /* RegisterView.swift in Sources */,
+				D0EBC32C25B021CD00CB504A /* ViewControllerProvider+Register.swift in Sources */,
+				D0AA46A82597464000B187CF /* LoginView.swift in Sources */,
+				D047042D25AEC31C00AA56CC /* FirebaseViewModel.swift in Sources */,
+				D0AA46B42597476600B187CF /* WebService.swift in Sources */,
+				D04D646425A4DCD20028CA66 /* ViewModel.swift in Sources */,
+				D0EBC32F25B0221300CB504A /* RegisterAssembly.swift in Sources */,
+				D0EBC33E25B023B500CB504A /* HomeViewModel.swift in Sources */,
+				D047043F25AEC6ED00AA56CC /* SplashScreenView.swift in Sources */,
+				D047043A25AEC66800AA56CC /* SplashScreenAssembly.swift in Sources */,
+				D0EBC33825B022FA00CB504A /* HomeAssembly.swift in Sources */,
+				D08105672598936E0052625D /* Weakable.swift in Sources */,
+				D047044225AEC84A00AA56CC /* SplashScreenViewModel.swift in Sources */,
+				D0EBC33B25B0232E00CB504A /* HomeView.swift in Sources */,
+				D047042A25AEBC2700AA56CC /* LoginAssembly.swift in Sources */,
+				D081055F259875BE0052625D /* FirebaseService.swift in Sources */,
+				D047040D25AEB1B600AA56CC /* RegisterViewModel.swift in Sources */,
+				D047042725AEBBFE00AA56CC /* ViewControllerProvider.swift in Sources */,
+				D0AA46BA2597486200B187CF /* AnyEncodable.swift in Sources */,
+				D0AA46BF259749B500B187CF /* AnyPublisher+Extensions.swift in Sources */,
+				D0AA46C225974A9B00B187CF /* RegisterWebService.swift in Sources */,
 				D0AA468D25973AB100B187CF /* Sync_MusicApp.swift in Sources */,
+				D0EBC33425B022ED00CB504A /* ViewControllerProvider+Home.swift in Sources */,
+				D047041625AEB76B00AA56CC /* HelperAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,18 +539,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Sync Music/Preview Content\"";
-				DEVELOPMENT_TEAM = S4J5D3N22R;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_ASSET_PATHS = "\"Sync Music/Application/Supporting Files/Preview Content\"";
+				DEVELOPMENT_TEAM = 94FLWD5X32;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Sync Music/Info.plist";
+				INFOPLIST_FILE = "Sync Music/Application/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.maxencemottard.Sync-Music";
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxencemottard.syncmusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.maxencemottard.syncmusic";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -289,18 +563,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Sync Music/Preview Content\"";
-				DEVELOPMENT_TEAM = S4J5D3N22R;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_ASSET_PATHS = "\"Sync Music/Application/Supporting Files/Preview Content\"";
+				DEVELOPMENT_TEAM = 94FLWD5X32;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Sync Music/Info.plist";
+				INFOPLIST_FILE = "Sync Music/Application/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.maxencemottard.Sync-Music";
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxencemottard.syncmusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.maxencemottard.syncmusic";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -328,6 +604,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D047040F25AEB71A00AA56CC /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.1;
+			};
+		};
+		D047041825AEB7F000AA56CC /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/SwinjectAutoregistration.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.0;
+			};
+		};
+		D0AA469C2597451100B187CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D047041025AEB71A00AA56CC /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D047040F25AEB71A00AA56CC /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		D047041925AEB7F000AA56CC /* SwinjectAutoregistration */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D047041825AEB7F000AA56CC /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
+			productName = SwinjectAutoregistration;
+		};
+		D0AA469D2597451100B187CF /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0AA469C2597451100B187CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D0AA468125973AB100B187CF /* Project object */;
 }
