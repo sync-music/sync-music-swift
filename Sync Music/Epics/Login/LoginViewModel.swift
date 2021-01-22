@@ -13,6 +13,7 @@ import Combine
 final class LoginViewModel: FirebaseViewModel {
     @Published var mail: String = ""
     @Published var password: String = ""
+    @State var registerViewIsPresented = false
     
     func handleLogin() {
         firebaseService.auth.signIn(withEmail: mail, password: password) { (authResult, error) in

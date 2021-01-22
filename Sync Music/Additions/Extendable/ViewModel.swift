@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
 struct EmptyParameters: Encodable {}
 struct EmptyResponse: Decodable {}
@@ -14,6 +15,7 @@ struct EmptyResponse: Decodable {}
 class ViewModel: ObservableObject, Weakable {
     var bag = Set<AnyCancellable>()
     var error: Error?
+    @State var errorAlertIsShown: Bool = false
     
     func executeRequest<T: WebService>(_ serviceSetup: ExecuteServiceSetup<T>, onSuccess: @escaping ((T.DecodedType) -> Void), onError: ((Error) -> Void)? = nil) {
         serviceSetup.service
@@ -55,7 +57,7 @@ class ViewModel: ObservableObject, Weakable {
 
     private func handleError(error: Error) {
         self.error = error
-        print(error)
+        errorAlertIsShown = true
     }
     
     struct ExecuteServiceSetup<T: WebService> {

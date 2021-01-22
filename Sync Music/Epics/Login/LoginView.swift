@@ -7,15 +7,12 @@
 
 import SwiftUI
 
-struct LoginView: View {
+struct LoginView: BaseView {
+    typealias VM = LoginViewModel
+    
     @ObservedObject var viewModel: LoginViewModel
-    @State var registerViewIsPresented = false
     
-    var body: some View {
-        loginView
-    }
-    
-    var loginView: some View {
+    var content: some View {
         VStack {
             TextField("Enter your name", text: $viewModel.mail)
             Text("Hello, \(viewModel.mail)!")
@@ -27,9 +24,9 @@ struct LoginView: View {
                 Text("Login")
             }
             Button("Register") {
-                registerViewIsPresented = true
+                viewModel.registerViewIsPresented = true
             }
-        }.sheet(isPresented: $registerViewIsPresented) {
+        }.sheet(isPresented: viewModel.$registerViewIsPresented) {
             ViewProvider.register()
         }
     }

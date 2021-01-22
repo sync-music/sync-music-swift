@@ -20,6 +20,7 @@
 		D047043F25AEC6ED00AA56CC /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047043E25AEC6ED00AA56CC /* SplashScreenView.swift */; };
 		D047044225AEC84A00AA56CC /* SplashScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047044125AEC84A00AA56CC /* SplashScreenViewModel.swift */; };
 		D04D646425A4DCD20028CA66 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D646325A4DCD20028CA66 /* ViewModel.swift */; };
+		D05F014325BB58F800AF1555 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05F014225BB58F800AF1555 /* BaseView.swift */; };
 		D06842C625B10B580089CB8A /* ActiveWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06842C525B10B580089CB8A /* ActiveWebService.swift */; };
 		D06842CB25B11A5B0089CB8A /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06842CA25B11A5B0089CB8A /* URL.swift */; };
 		D06842D025B11ED10089CB8A /* UserActivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06842CF25B11ED10089CB8A /* UserActivationView.swift */; };
@@ -64,6 +65,7 @@
 		D047043E25AEC6ED00AA56CC /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		D047044125AEC84A00AA56CC /* SplashScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewModel.swift; sourceTree = "<group>"; };
 		D04D646325A4DCD20028CA66 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		D05F014225BB58F800AF1555 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		D06842C525B10B580089CB8A /* ActiveWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveWebService.swift; sourceTree = "<group>"; };
 		D06842C825B10FEF0089CB8A /* Sync Music.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Sync Music.entitlements"; sourceTree = "<group>"; };
 		D06842CA25B11A5B0089CB8A /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			children = (
 				D04D646325A4DCD20028CA66 /* ViewModel.swift */,
 				D047042C25AEC31C00AA56CC /* FirebaseViewModel.swift */,
+				D05F014225BB58F800AF1555 /* BaseView.swift */,
 			);
 			path = Extendable;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 				D0EBC33425B022ED00CB504A /* ViewControllerProvider+Home.swift in Sources */,
 				D06842C625B10B580089CB8A /* ActiveWebService.swift in Sources */,
 				D0A0C09F25B0B026000EFE9E /* ViewControllerProvider+MailVerificaationRequired.swift in Sources */,
+				D05F014325BB58F800AF1555 /* BaseView.swift in Sources */,
 				D0A0C0A825B0B201000EFE9E /* MailVerificationRequiredViewModel.swift in Sources */,
 				D047041625AEB76B00AA56CC /* HelperAssembly.swift in Sources */,
 			);
