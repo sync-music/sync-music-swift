@@ -12,7 +12,7 @@
 		D047041625AEB76B00AA56CC /* HelperAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047041525AEB76B00AA56CC /* HelperAssembly.swift */; };
 		D047041A25AEB7F000AA56CC /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = D047041925AEB7F000AA56CC /* SwinjectAutoregistration */; };
 		D047042225AEBB4100AA56CC /* ViewControllerProvider+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047042125AEBB4100AA56CC /* ViewControllerProvider+Login.swift */; };
-		D047042725AEBBFE00AA56CC /* ViewControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047042625AEBBFE00AA56CC /* ViewControllerProvider.swift */; };
+		D047042725AEBBFE00AA56CC /* ViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047042625AEBBFE00AA56CC /* ViewProvider.swift */; };
 		D047042A25AEBC2700AA56CC /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047042925AEBC2700AA56CC /* LoginAssembly.swift */; };
 		D047042D25AEC31C00AA56CC /* FirebaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047042C25AEC31C00AA56CC /* FirebaseViewModel.swift */; };
 		D047043725AEC64700AA56CC /* ViewControllerProvider+SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047043625AEC64700AA56CC /* ViewControllerProvider+SplashScreen.swift */; };
@@ -20,9 +20,19 @@
 		D047043F25AEC6ED00AA56CC /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047043E25AEC6ED00AA56CC /* SplashScreenView.swift */; };
 		D047044225AEC84A00AA56CC /* SplashScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047044125AEC84A00AA56CC /* SplashScreenViewModel.swift */; };
 		D04D646425A4DCD20028CA66 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D646325A4DCD20028CA66 /* ViewModel.swift */; };
+		D06842C625B10B580089CB8A /* ActiveWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06842C525B10B580089CB8A /* ActiveWebService.swift */; };
+		D06842CB25B11A5B0089CB8A /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06842CA25B11A5B0089CB8A /* URL.swift */; };
+		D06842D025B11ED10089CB8A /* UserActivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06842CF25B11ED10089CB8A /* UserActivationView.swift */; };
+		D06842D425B11EF70089CB8A /* UserActivationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06842D325B11EF70089CB8A /* UserActivationViewModel.swift */; };
+		D06842D725B120100089CB8A /* UserActivationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06842D625B120100089CB8A /* UserActivationAssembly.swift */; };
+		D06842DA25B121410089CB8A /* ViewControllerProvider+UserActivation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06842D925B121410089CB8A /* ViewControllerProvider+UserActivation.swift */; };
 		D081055F259875BE0052625D /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D081055E259875BE0052625D /* FirebaseService.swift */; };
 		D081056425987A770052625D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D081056325987A770052625D /* GoogleService-Info.plist */; };
 		D08105672598936E0052625D /* Weakable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08105662598936E0052625D /* Weakable.swift */; };
+		D0A0C09F25B0B026000EFE9E /* ViewControllerProvider+MailVerificaationRequired.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A0C09E25B0B026000EFE9E /* ViewControllerProvider+MailVerificaationRequired.swift */; };
+		D0A0C0A225B0B082000EFE9E /* MailVerificationRequiredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A0C0A125B0B082000EFE9E /* MailVerificationRequiredView.swift */; };
+		D0A0C0A525B0B0C9000EFE9E /* MailVerificationRequiredAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A0C0A425B0B0C9000EFE9E /* MailVerificationRequiredAssembly.swift */; };
+		D0A0C0A825B0B201000EFE9E /* MailVerificationRequiredViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A0C0A725B0B200000EFE9E /* MailVerificationRequiredViewModel.swift */; };
 		D0AA468D25973AB100B187CF /* Sync_MusicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AA468C25973AB100B187CF /* Sync_MusicApp.swift */; };
 		D0AA469125973AB600B187CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0AA469025973AB600B187CF /* Assets.xcassets */; };
 		D0AA469425973AB600B187CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0AA469325973AB600B187CF /* Preview Assets.xcassets */; };
@@ -46,7 +56,7 @@
 		D047040C25AEB1B600AA56CC /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		D047041525AEB76B00AA56CC /* HelperAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperAssembly.swift; sourceTree = "<group>"; };
 		D047042125AEBB4100AA56CC /* ViewControllerProvider+Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllerProvider+Login.swift"; sourceTree = "<group>"; };
-		D047042625AEBBFE00AA56CC /* ViewControllerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProvider.swift; sourceTree = "<group>"; };
+		D047042625AEBBFE00AA56CC /* ViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProvider.swift; sourceTree = "<group>"; };
 		D047042925AEBC2700AA56CC /* LoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
 		D047042C25AEC31C00AA56CC /* FirebaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseViewModel.swift; sourceTree = "<group>"; };
 		D047043625AEC64700AA56CC /* ViewControllerProvider+SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllerProvider+SplashScreen.swift"; sourceTree = "<group>"; };
@@ -54,9 +64,20 @@
 		D047043E25AEC6ED00AA56CC /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		D047044125AEC84A00AA56CC /* SplashScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewModel.swift; sourceTree = "<group>"; };
 		D04D646325A4DCD20028CA66 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		D06842C525B10B580089CB8A /* ActiveWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveWebService.swift; sourceTree = "<group>"; };
+		D06842C825B10FEF0089CB8A /* Sync Music.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Sync Music.entitlements"; sourceTree = "<group>"; };
+		D06842CA25B11A5B0089CB8A /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
+		D06842CF25B11ED10089CB8A /* UserActivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActivationView.swift; sourceTree = "<group>"; };
+		D06842D325B11EF70089CB8A /* UserActivationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActivationViewModel.swift; sourceTree = "<group>"; };
+		D06842D625B120100089CB8A /* UserActivationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActivationAssembly.swift; sourceTree = "<group>"; };
+		D06842D925B121410089CB8A /* ViewControllerProvider+UserActivation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllerProvider+UserActivation.swift"; sourceTree = "<group>"; };
 		D081055E259875BE0052625D /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		D081056325987A770052625D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D08105662598936E0052625D /* Weakable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weakable.swift; sourceTree = "<group>"; };
+		D0A0C09E25B0B026000EFE9E /* ViewControllerProvider+MailVerificaationRequired.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllerProvider+MailVerificaationRequired.swift"; sourceTree = "<group>"; };
+		D0A0C0A125B0B082000EFE9E /* MailVerificationRequiredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailVerificationRequiredView.swift; sourceTree = "<group>"; };
+		D0A0C0A425B0B0C9000EFE9E /* MailVerificationRequiredAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailVerificationRequiredAssembly.swift; sourceTree = "<group>"; };
+		D0A0C0A725B0B200000EFE9E /* MailVerificationRequiredViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailVerificationRequiredViewModel.swift; sourceTree = "<group>"; };
 		D0AA468925973AB100B187CF /* Sync Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sync Music.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0AA468C25973AB100B187CF /* Sync_MusicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sync_MusicApp.swift; sourceTree = "<group>"; };
 		D0AA469025973AB600B187CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,7 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				D047041525AEB76B00AA56CC /* HelperAssembly.swift */,
-				D047042625AEBBFE00AA56CC /* ViewControllerProvider.swift */,
+				D047042625AEBBFE00AA56CC /* ViewProvider.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -156,6 +177,51 @@
 			path = Extendable;
 			sourceTree = "<group>";
 		};
+		D06842CD25B11EB90089CB8A /* UserActivation */ = {
+			isa = PBXGroup;
+			children = (
+				D06842CE25B11EC10089CB8A /* #Navigation */,
+				D06842CF25B11ED10089CB8A /* UserActivationView.swift */,
+				D06842D325B11EF70089CB8A /* UserActivationViewModel.swift */,
+			);
+			path = UserActivation;
+			sourceTree = "<group>";
+		};
+		D06842CE25B11EC10089CB8A /* #Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				D06842D625B120100089CB8A /* UserActivationAssembly.swift */,
+				D06842D925B121410089CB8A /* ViewControllerProvider+UserActivation.swift */,
+			);
+			path = "#Navigation";
+			sourceTree = "<group>";
+		};
+		D0A0C09B25B0AF91000EFE9E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D0A0C09C25B0AFE1000EFE9E /* MailVerificationRequired */ = {
+			isa = PBXGroup;
+			children = (
+				D0A0C09D25B0B00A000EFE9E /* #Navigation */,
+				D0A0C0A125B0B082000EFE9E /* MailVerificationRequiredView.swift */,
+				D0A0C0A725B0B200000EFE9E /* MailVerificationRequiredViewModel.swift */,
+			);
+			path = MailVerificationRequired;
+			sourceTree = "<group>";
+		};
+		D0A0C09D25B0B00A000EFE9E /* #Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				D0A0C09E25B0B026000EFE9E /* ViewControllerProvider+MailVerificaationRequired.swift */,
+				D0A0C0A425B0B0C9000EFE9E /* MailVerificationRequiredAssembly.swift */,
+			);
+			path = "#Navigation";
+			sourceTree = "<group>";
+		};
 		D0AA468025973AB100B187CF = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +241,7 @@
 		D0AA468B25973AB100B187CF /* Sync Music */ = {
 			isa = PBXGroup;
 			children = (
+				D06842C825B10FEF0089CB8A /* Sync Music.entitlements */,
 				D0AA46AF2597474F00B187CF /* Additions */,
 				D0AA46A0259745AE00B187CF /* Application */,
 				D0AA46A42597460A00B187CF /* Epics */,
@@ -215,6 +282,8 @@
 		D0AA46A42597460A00B187CF /* Epics */ = {
 			isa = PBXGroup;
 			children = (
+				D06842CD25B11EB90089CB8A /* UserActivation */,
+				D0A0C09C25B0AFE1000EFE9E /* MailVerificationRequired */,
 				D0EBC33125B022D200CB504A /* Home */,
 				D047043025AEC60100AA56CC /* SplashScreen */,
 				D047040A25AEB1A100AA56CC /* Register */,
@@ -247,6 +316,7 @@
 			children = (
 				D04D645E25A4DC110028CA66 /* Extendable */,
 				D0AA46BD259749A300B187CF /* Extensions */,
+				D0A0C09B25B0AF91000EFE9E /* Components */,
 				D0AA46B82597485400B187CF /* Objects */,
 				D0AA46B12597475700B187CF /* Protocols */,
 			);
@@ -274,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				D0AA46C125974A9B00B187CF /* RegisterWebService.swift */,
+				D06842C525B10B580089CB8A /* ActiveWebService.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -282,6 +353,7 @@
 			isa = PBXGroup;
 			children = (
 				D0AA46BE259749B500B187CF /* AnyPublisher+Extensions.swift */,
+				D06842CA25B11A5B0089CB8A /* URL.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -385,32 +457,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D06842D725B120100089CB8A /* UserActivationAssembly.swift in Sources */,
 				D0AA46AB259746B000B187CF /* LoginViewModel.swift in Sources */,
+				D06842DA25B121410089CB8A /* ViewControllerProvider+UserActivation.swift in Sources */,
 				D047043725AEC64700AA56CC /* ViewControllerProvider+SplashScreen.swift in Sources */,
 				D047042225AEBB4100AA56CC /* ViewControllerProvider+Login.swift in Sources */,
 				D0EBC32925B021A100CB504A /* RegisterView.swift in Sources */,
 				D0EBC32C25B021CD00CB504A /* ViewControllerProvider+Register.swift in Sources */,
+				D0A0C0A225B0B082000EFE9E /* MailVerificationRequiredView.swift in Sources */,
 				D0AA46A82597464000B187CF /* LoginView.swift in Sources */,
 				D047042D25AEC31C00AA56CC /* FirebaseViewModel.swift in Sources */,
 				D0AA46B42597476600B187CF /* WebService.swift in Sources */,
+				D06842D025B11ED10089CB8A /* UserActivationView.swift in Sources */,
 				D04D646425A4DCD20028CA66 /* ViewModel.swift in Sources */,
 				D0EBC32F25B0221300CB504A /* RegisterAssembly.swift in Sources */,
 				D0EBC33E25B023B500CB504A /* HomeViewModel.swift in Sources */,
 				D047043F25AEC6ED00AA56CC /* SplashScreenView.swift in Sources */,
 				D047043A25AEC66800AA56CC /* SplashScreenAssembly.swift in Sources */,
+				D06842CB25B11A5B0089CB8A /* URL.swift in Sources */,
 				D0EBC33825B022FA00CB504A /* HomeAssembly.swift in Sources */,
 				D08105672598936E0052625D /* Weakable.swift in Sources */,
+				D0A0C0A525B0B0C9000EFE9E /* MailVerificationRequiredAssembly.swift in Sources */,
 				D047044225AEC84A00AA56CC /* SplashScreenViewModel.swift in Sources */,
 				D0EBC33B25B0232E00CB504A /* HomeView.swift in Sources */,
 				D047042A25AEBC2700AA56CC /* LoginAssembly.swift in Sources */,
 				D081055F259875BE0052625D /* FirebaseService.swift in Sources */,
+				D06842D425B11EF70089CB8A /* UserActivationViewModel.swift in Sources */,
 				D047040D25AEB1B600AA56CC /* RegisterViewModel.swift in Sources */,
-				D047042725AEBBFE00AA56CC /* ViewControllerProvider.swift in Sources */,
+				D047042725AEBBFE00AA56CC /* ViewProvider.swift in Sources */,
 				D0AA46BA2597486200B187CF /* AnyEncodable.swift in Sources */,
 				D0AA46BF259749B500B187CF /* AnyPublisher+Extensions.swift in Sources */,
 				D0AA46C225974A9B00B187CF /* RegisterWebService.swift in Sources */,
 				D0AA468D25973AB100B187CF /* Sync_MusicApp.swift in Sources */,
 				D0EBC33425B022ED00CB504A /* ViewControllerProvider+Home.swift in Sources */,
+				D06842C625B10B580089CB8A /* ActiveWebService.swift in Sources */,
+				D0A0C09F25B0B026000EFE9E /* ViewControllerProvider+MailVerificaationRequired.swift in Sources */,
+				D0A0C0A825B0B201000EFE9E /* MailVerificationRequiredViewModel.swift in Sources */,
 				D047041625AEB76B00AA56CC /* HelperAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -539,6 +621,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Sync Music/Sync Music.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"Sync Music/Application/Supporting Files/Preview Content\"";
@@ -563,6 +646,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Sync Music/Sync Music.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"Sync Music/Application/Supporting Files/Preview Content\"";

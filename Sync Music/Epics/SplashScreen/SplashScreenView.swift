@@ -15,9 +15,9 @@ struct SplashScreenView: View {
             if viewModel.state == .loading {
                 loadingView
             } else if viewModel.state == .unauthenticated {
-                ViewControllerProvider.login()
+                ViewProvider.login()
             } else {
-                ViewControllerProvider.home()
+                ViewProvider.home()
             }
         }.onAppear(perform: {
             viewModel.subscribeToFirebaseState()
@@ -34,6 +34,6 @@ struct SplashScreenView: View {
 
 struct SplashScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        ViewControllerProvider.splashscreen()
+        ViewProvider.splashscreen()
     }
 }

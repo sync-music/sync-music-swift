@@ -8,7 +8,7 @@
 import Foundation
 import Swinject
 
-class ViewControllerProvider {
+class ViewProvider {
     static func generateAssembler(viewControllerAssembly: Assembly) -> Assembler {
         return Assembler([viewControllerAssembly, HelperAssembly()])
     }

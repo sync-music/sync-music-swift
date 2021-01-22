@@ -15,9 +15,13 @@ final class FirebaseService: ObservableObject, Weakable {
     @State private var bag = Set<AnyCancellable>()
     @Published var isAuthenticated: Bool?
     var currentIdToken: String?
-
+    
     var auth: Auth {
         return Auth.auth()
+    }
+    
+    var user: User? {
+        return auth.currentUser
     }
     
     init() {

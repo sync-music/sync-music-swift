@@ -9,12 +9,9 @@ import Foundation
 import Combine
 import FirebaseAuth
 
-struct RegisterWebServiceParameters: Encodable {}
-struct RegisterWebServiceResponse: Decodable {}
-
 final class RegisterWebService: WebService {
-    typealias DecodedType = RegisterWebServiceResponse
-    typealias ServiceParameters = RegisterWebServiceParameters
+    typealias DecodedType = EmptyResponse
+    typealias ServiceParameters = EmptyParameters
     
     var url: String = "https://api.syncmusic.maxencemottard.com/api/register"
     

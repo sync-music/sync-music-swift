@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension ViewControllerProvider {
+extension ViewProvider {
     static func register() -> RegisterView {
         let assembler = generateAssembler(viewControllerAssembly: RegisterAssembly())
         

@@ -20,10 +20,23 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct Sync_MusicApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    @State var openUrlData: [String: String]?
     
     var body: some Scene {
         WindowGroup {
-            ViewControllerProvider.splashscreen()
+            Group {
+                if let data = openUrlData, data["mode"] == "verifyEmail", let oobCode = data["oobCode"] {
+                    ViewProvider.userActivation(oobCode: oobCode)
+                } else {
+                    ViewProvider.splashscreen()
+                }
+            }.onOpenURL(perform: handleOnOpenURL(url:))
+        }
+    }
+
+    private func handleOnOpenURL(url: URL) {
+        if url.path == "/api/firebase/actions" {
+            openUrlData = url.params
         }
     }
 }

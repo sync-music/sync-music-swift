@@ -30,7 +30,7 @@ struct LoginView: View {
                 registerViewIsPresented = true
             }
         }.sheet(isPresented: $registerViewIsPresented) {
-            ViewControllerProvider.register()
+            ViewProvider.register()
         }
     }
 }

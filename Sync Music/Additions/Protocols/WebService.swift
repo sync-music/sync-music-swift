@@ -35,29 +35,47 @@ extension WebService {
         return try JSONEncoder().encode(encodable)
     }
     
-    func generateHeaders() -> [String: String] {
+    private func generateHeaders() -> [String: String] {
         headers["content-type"] = "application/json"
         headers["no-cache"] = "cache-control"
         
         return headers
     }
+
+    private func generateRequest(_ parameters: ServiceParameters, urlParameters: [String]) throws -> URLRequest? {
+        let urlString = String(format: url, arguments: urlParameters)
+        guard let url = URL(string: urlString) else { return nil }
+
+        var request = URLRequest(url: url)
+        request.httpMethod = httpMethod.rawValue
+        request.httpBody = try encodeBody(parameters: parameters)
+        
+        for (key, value) in generateHeaders() {
+            request.addValue(value, forHTTPHeaderField: key)
+        }
+
+        return request
+    }
     
     func call(_ parameters: ServiceParameters, urlParameters: [String]) -> AnyPublisher<DecodedType, Error> {
         do {
-            let urlString = String(format: url, arguments: urlParameters)
-            guard let url = URL(string: urlString) else { return AnyPublisher.empty() }
-
-            var request = URLRequest(url: url)
-            request.httpMethod = httpMethod.rawValue
-            request.httpBody = try encodeBody(parameters: parameters)
-            
-            for (key, value) in generateHeaders() {
-                request.addValue(value, forHTTPHeaderField: key)
-            }
+            guard let request = try generateRequest(parameters, urlParameters: urlParameters) else { return AnyPublisher.empty() }
             
             return URLSession.shared.dataTaskPublisher(for: request)
                 .map { $0.data }
                 .decode(type: DecodedType.self, decoder: JSONDecoder())
+                .eraseToAnyPublisher()
+        } catch let error {
+            return AnyPublisher(Fail(error: error))
+        }
+    }
+    
+    func callWithoutDecode(_ parameters: ServiceParameters, urlParameters: [String]) -> AnyPublisher<Void, Error> {
+        do {
+            guard let request = try generateRequest(parameters, urlParameters: urlParameters) else { return AnyPublisher.empty() }
+            
+            return URLSession.shared.dataTaskPublisher(for: request)
+                .tryMap{ _ in return }
                 .eraseToAnyPublisher()
         } catch let error {
             return AnyPublisher(Fail(error: error))

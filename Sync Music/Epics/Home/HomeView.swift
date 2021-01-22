@@ -26,6 +26,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        ViewControllerProvider.home()
+        ViewProvider.home()
     }
 }

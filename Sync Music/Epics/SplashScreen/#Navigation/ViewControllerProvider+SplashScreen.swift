@@ -5,7 +5,7 @@
 //  Created by Maxence Mottard on 13/01/2021.
 //
 
-extension ViewControllerProvider {
+extension ViewProvider {
     static func splashscreen() -> SplashScreenView {
         let assembler = generateAssembler(viewControllerAssembly: SplashScreenAssembly())
         

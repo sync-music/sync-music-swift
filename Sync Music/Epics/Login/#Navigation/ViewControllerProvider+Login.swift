@@ -8,7 +8,7 @@
 import Foundation
 import Swinject
 
-extension ViewControllerProvider {
+extension ViewProvider {
     static func login() -> LoginView {
         let assembler = generateAssembler(viewControllerAssembly: LoginAssembly())
         

@@ -19,7 +19,6 @@ final class RegisterViewModel: FirebaseViewModel {
 //        Check values
 
         firebaseService.auth.createUser(withEmail: mail, password: password, completion: weakify { (strongSelf, result, error) in
-            
             strongSelf.executeRequestWithAuthorization(ExecuteServiceSetup(
                 service: strongSelf.registerService,
                 parameters: .init()
